@@ -1,0 +1,62 @@
+.container-flex-col {
+    @include flexbox;
+    @include flex-direction(column);
+}
+
+.container-flex-row {
+    @include flexbox;
+    @include flex-direction(row);
+}
+
+.container-flex-col-rev {
+    @include flexbox;
+    @include flex-direction(column-reverse);
+}
+
+.flex-item-1 {
+    @include flex(1);
+}
+
+.flex-item-2 {
+    @include flex(2);
+}
+
+.flex-item-3 {
+    @include flex(3);
+}
+
+.flex-item-4 {
+    @include flex(4);
+}
+
+.flex-item-5 {
+    @include flex(5);
+}
+
+.flex-item-6 {
+    @include flex(6);
+}
+
+.flex-item-7 {
+    @include flex(7);
+}
+
+.flex-item-8 {
+    @include flex(8);
+}
+
+.flex-item-9 {
+    @include flex(9);
+}
+
+.flex-item-10 {
+    @include flex(10);
+}
+
+.flex-item-11 {
+    @include flex(11);
+}
+
+.flex-item-12 {
+    @include flex(12);
+}
