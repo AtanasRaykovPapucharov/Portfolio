@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    form(action= url method="POST")
+        h2 API Log in
+        br
+        label(for="email") email: 
+        input#email(type="email", name="email" required)
+        br
+        br
+        label(for="password") password: 
+        input#password(type="password", name="password" required)
+        br
+        br
+        input(type="submit" value="Submit")

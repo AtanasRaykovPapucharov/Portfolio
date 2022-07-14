@@ -8,6 +8,16 @@
     @include flex-direction(row);
 }
 
+.container-resp-col {
+    @include flexbox;
+    @include flex-direction(column);
+}
+
+.container-resp-row {
+    @include flexbox;
+    @include flex-direction(row);
+}
+
 .container-flex-col-rev {
     @include flexbox;
     @include flex-direction(column-reverse);
@@ -59,4 +69,14 @@
 
 .flex-item-12 {
     @include flex(12);
+}
+
+@media (min-width: 768px) {
+    .container-resp-col {
+        @include flex-direction(row);
+    }
+    
+    .container-resp-row {
+        @include flex-direction(column);
+    }
 }
