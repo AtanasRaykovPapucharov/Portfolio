@@ -9,12 +9,12 @@ const fs = require('fs');
 
 const jwt = require('jsonwebtoken')
 
-const GOOD_RESPONSE = {
-    'status': 200,
-    'message': 'API user connected!',
-    'routes': ['/api/item', '/api/blog'],
-    'PS': 'To prettify, add "?pretty" to URL path'
-}
+// const GOOD_RESPONSE = {
+//     'status': 200,
+//     'message': 'API user connected!',
+//     'routes': ['/api/item', '/api/blog'],
+//     'PS': 'To prettify, add "?pretty" to URL path'
+// }
 
 const isAuth = require('./auth').isAuth
 
@@ -24,12 +24,11 @@ module.exports = (app, controller, collections, params) => {
             resp.redirect('/api')
         })
         .get('/api', (req, resp) => {
-            resp.status(200).json(GOOD_RESPONSE)
-            // if(!isAuth(req)) {
-            //     resp.status(404).render("login", { url: params.url + '/api'})
-            // } else {
-            //     resp.status(200).json(GOOD_RESPONSE)
-            // }
+            if(!isAuth(req)) {
+                resp.status(404).render("login", { url: params.url + '/api'})
+            } else {
+                resp.status(200).render("main", { url: params.url + '/api'}) //.json(GOOD_RESPONSE)
+            }
         })
         .post('/api', (req, resp) => {
             try {

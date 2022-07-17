@@ -5,7 +5,7 @@
  *
  */
 
-const PASS = require('../DBPASS.json')
+const PASS = require('../DBPASS.json').word
 
 module.exports = {
     development: {

@@ -1,0 +1,21 @@
+.app-nav.technologies {
+    background-color: rgba(241, 238, 233, 0.5);
+    padding: 0 12% 0 12%;
+    .tech-box {
+        border-bottom: 5px solid transparent;
+
+        * {
+            width: 100%;
+        }
+
+        &:hover {
+            border-color: $orange;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .app-nav.technologies {
+        padding: 0 5% 0 40%;
+    }
+}

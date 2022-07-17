@@ -17,6 +17,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: $light;
     color: $dark-blue;
 
     * {
@@ -40,12 +41,5 @@ body {
 
     ul {
         list-style-type: none;
-    }
-}
-
-@media (min-width: 540px) {
-
-    body #zita-math-container {
-        padding: 0 0 0 35%;
     }
 }

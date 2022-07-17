@@ -1,0 +1,83 @@
+.app {
+    .app-header {
+        background-color: bisque;
+        border-bottom: 2px solid #007acc;
+        width: 100%;
+        height: 400px;
+        text-align: center;
+
+        .home-btn, .cv-btn {
+            position: absolute;
+            z-index: 1100;
+        }
+
+        .home-btn {
+            top: 5px;
+            left: 5px;
+        }
+
+        .cv-btn {
+            top: 12px;
+            left: 312px;
+        }
+
+        .avatar-box { 
+            padding: 20px 0 0 5px;
+            
+            img.avatar {
+                border: 1px solid transparent;
+                border-radius: 50%;
+            }
+        }
+
+        .title-box {
+            a {
+                margin: 0 15px 0 15px;
+
+                img {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 460px) {
+    .app {
+        .app-header {
+            .home-btn {
+                left: 25px;
+            }
+
+            .cv-btn {
+                left: 405px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .app {
+        .app-header {
+            height: 200px;
+
+            .home-btn {
+                left: 695px;
+
+            }
+
+            .cv-btn {
+                left: 699px;
+                top: 53px;
+            }
+
+            .avatar-box { 
+                padding: 10px 0 0 10px;
+            }
+
+            .title-box {
+                padding-top: 10px;
+            }
+        }
+    }
+}

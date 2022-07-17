@@ -1,6 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
-import "./sass/index.scss";
+import {hydrate, render} from 'react-dom';
+import {HashRouter as Router} from 'react-router-dom';
+import App from './components/App';
+import './sass/index.scss';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const wrapper = document.getElementById('root');
+
+const main = () => {
+  return <Router>
+    <App />
+  </Router>
+}
+
+if (wrapper.hasChildNodes()) {
+  hydrate(
+    main(),
+    wrapper 
+  );
+} else {
+  render(
+    main(),
+    wrapper 
+  );
+}
