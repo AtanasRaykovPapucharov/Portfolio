@@ -1,4 +1,7 @@
 .app .app-main {
     min-height: 560px;
     padding: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    border-top: 2px solid $pink;
 }

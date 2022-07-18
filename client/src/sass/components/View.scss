@@ -1,0 +1,47 @@
+.view-wrapper {
+    .repo {
+        display: inline-block;
+        width: 155px;
+        border: 2px solid $pink;
+        border-radius: 10px;
+        margin: 2px;
+        padding: 2px;
+        background-color: white;
+        text-align: center;
+
+        &:hover {
+            background-color: rgba(227, 174, 195, .7);
+
+            h3 {
+                color: white;
+            }
+        }
+    }
+}
+
+@media (min-width: 361px) {
+    .view-wrapper {
+        .repo {
+            width: 40%;
+            margin: 8px;
+        }
+    }
+}
+
+@media (min-width: 460px) {
+    .view-wrapper {
+        .repo {
+            width: 27%;
+            margin: 5px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .view-wrapper {
+        .repo {
+            width: 16%;
+            margin: 7px;
+        }
+    }
+}

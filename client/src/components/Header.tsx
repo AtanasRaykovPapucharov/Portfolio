@@ -1,43 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Avatar from '../assets/image/avatar.jpg';
-import Github from '../assets/image/GitHub-Emblem.png';
-import Linkedin from '../assets/image/Linkedin-Logo.png';
-import HomeIcos from '../assets/image/home.png';
-import CvIco from '../assets/image/cv.png';
+import { AVATAR, BG, NAME, POSITION, SOCIAL, BUTTONS } from './Static';
 
-const socials = [
-  {
-    name: 'github',
-    link: 'https://github.com/AtanasRaykovPapucharov',
-    imgSrc: Github
-  },
-  {
-    name: 'linkedin',
-    link: 'https://www.linkedin.com/in/atanas-papucharov-b5957a48/',
-    imgSrc: Linkedin
-  }
-]
+const GetButtons = () => {
+  return BUTTONS.map((btn, i) => {
+    return <Link key={i} className={btn.title + '-btn'} to={'/' + btn.title}>
+      <img src={btn.imgSrc} alt={btn.name} width={btn.width + 'px'}/>
+    </Link>
+  })
+}
+
+const GetSocial:any = () => {
+  return SOCIAL.map((obj, i) => {
+    return <a key={i} href={obj.link} target='_blank'><img src={obj.imgSrc} alt={obj.name}/></a>
+  })
+}
 
 function Header() {
   return (
-    <header className='app-header container-resp-col'>
-      <Link className='home-btn' to='/home'><img src={HomeIcos} alt='Home' width='50px'/></Link>
-      <Link className='cv-btn' to='/cv'><img src={CvIco} alt='CV' width='35px'/></Link>
+    <header className='app-header container-resp-col' style={{backgroundImage: `url(${BG})`}}>
+      {GetButtons()}
       <section className='flex-item-1 avatar-box' >
-        <img className='avatar' src={Avatar} alt='avatar' />
+        <img className='avatar' src={AVATAR} alt='avatar' width='60%'/>
       </section>
       <section className='flex-item-2 title-box'>
-        <h1>Atanas Raykov Papucharov</h1>
-        <h2>Front-end Developer</h2>
+        <h1 className='my-name'>{NAME}</h1>
+        <h2 className='my-position'>{POSITION}</h2>
         <hr style={{width: "70%"}} />
         <section className='socials'>
-          {socials.map((obj, i) => {
-            return <a key={i} href={obj.link} target='_blank'><img src={obj.imgSrc} alt={obj.name}/></a>
-          })}
+          {GetSocial()}
         </section>
       </section>
-
     </header>
   );
 }

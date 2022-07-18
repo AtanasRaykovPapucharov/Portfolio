@@ -4,7 +4,7 @@ import {HashRouter as Router} from 'react-router-dom';
 import App from './components/App';
 import './sass/index.scss';
 
-const wrapper = document.getElementById('root');
+const wrapper:HTMLElement = document.getElementById('root');
 
 const main = () => {
   return <Router>

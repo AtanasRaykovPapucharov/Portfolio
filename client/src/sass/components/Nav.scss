@@ -1,21 +1,46 @@
 .app-nav.technologies {
     background-color: rgba(241, 238, 233, 0.5);
     padding: 0 12% 0 12%;
+    
     .tech-box {
         border-bottom: 5px solid transparent;
 
         * {
             width: 100%;
         }
+    }
 
-        &:hover {
-            border-color: $orange;
-        }
+    #CSharp:hover {
+        border-color: #9b4f96;
+    }
+
+    #HTML:hover {
+        border-color: #ee6427;
+    }
+
+    #SASS:hover {
+        border-color: #c95c95;
+    }
+
+    #JavaScript:hover {
+        border-color: #f7e018;
+    }
+
+    #TypeScript:hover {
+        border-color: #007acc;
+    }
+
+    #React:hover {
+        border-color: #222222$orange;
+    }
+
+    #NodeJS:hover {
+        border-color: #90c53f;
     }
 }
 
 @media (min-width: 768px) {
     .app-nav.technologies {
-        padding: 0 5% 0 40%;
+        padding: 0 11% 0 46%;
     }
 }

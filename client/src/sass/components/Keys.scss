@@ -1,0 +1,20 @@
+.app-keys {
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+
+    .key {
+        display: inline-block;
+        margin: 0 0 0 2px;
+        padding: 1px 2px 1px 2px;
+        border: 1px solid $pink;
+        background-color: rgba(255, 228, 196, .6);
+        border-radius: 2px;
+        color: $pink;
+        font-size: 13px;
+        font-weight: bolder;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
